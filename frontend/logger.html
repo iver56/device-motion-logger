@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Motion logger</title>
+
+  <style>
+    body {
+      font-size: 120%;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      display: block;
+      height: 60px;
+      line-height: 60px;
+      border: 1px solid grey;
+      padding: 10px;
+      background-color: #eee;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #bbb;
+    }
+
+    .tracking-enabled-radio {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+    }
+
+    .col-4 {
+      display: inline-block;
+      width: 100%;
+      line-height: 80px;
+    }
+  </style>
+</head>
+<body>
+
+<form action="" id="activity-type-form">
+  <div class="tracking-enabled-radio">
+    <div class="col-4">
+      Tracking:
+    </div>
+    <div class="col-4">
+      <input id="tracking-enabled-off" type="radio" name="tracking-enabled" value="off" checked>
+      <label for="tracking-enabled-off">Off</label>
+    </div>
+    <div class="col-4">
+      <input id="tracking-enabled-on" type="radio" name="tracking-enabled" value="on">
+      <label for="tracking-enabled-on">On</label>
+    </div>
+  </div>
+
+  <div class="activity-type-radio">
+    <input id="activity-type-sitting" type="radio" name="activity" value="sitting" checked>
+    <label for="activity-type-sitting">Sitting</label>
+
+    <input id="activity-type-walking" type="radio" name="activity" value="walking">
+    <label for="activity-type-walking">Walking</label>
+
+    <input id="activity-type-jogging" type="radio" name="activity" value="jogging">
+    <label for="activity-type-jogging">Jogging</label>
+  </div>
+</form>
+
+<script src="logger.js"></script>
+
+</body>
+</html>
